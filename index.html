@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-   <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js></script>
-   <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-   <script src="./js/events.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="./js/events.js"></script>
 </head>
 <body style="margin:0px; overflow:hidden;">
 <!-- load AR.js -->
@@ -16,18 +15,19 @@
 <!-- set AR.js to AFrame -->
 <a-scene embedded arjs="debugUIEnabled:false;">
     <a-assets>
+        <img id="minus-asset" src=".\images\gauge.png" />
         <!-- <a-entity id="gauge_medium" geometry="primitive: plane" material="src: url(.\images\gauge.png)"></a-entity>
          <a-entity id="plus" geometry="primitive: plane" material="src: url(.\images\plus.png)"></a-entity>
          <a-entity id="minus" geometry="primitive: plane" material="src: url(.\images\minus.png)"></a-entity>
     -->
     </a-assets>
 	  <!-- set marker -->
-    <a-marker preset="hiro">
+    <a-marker preset="hiro" markerhandler emitevents="true" cursor="rayOrigin: mouse">
         <!--    <a-image src="#minus" position="-1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
        <a-image src="#gauge_medium" position="0 0 0" rotation="-90 0 0" scale="1 1 1"></a-image>
        <a-image src="#plus" position="1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
     -->
-        <a-image id="minus" src=".\images\minus.png" position="-1 0 0" rotation="-90 0 0" color="#28a745" scale="0.5 0.5 0.5"></a-image>
+        <a-image id="minus" src="#minus-asset" position="-1 0 0" rotation="-90 0 0" color="#28a745" scale="0.5 0.5 0.5"></a-image>
         <a-image id="gauge" src=".\images\gauge.png" position="0 0 0" rotation="-90 0 0" color="#28a745" scale="1 1 1"></a-image>
         <a-image id="plus" src=".\images\plus.png" position="1 0 0" rotation="-90 0 0" color="#28a745" scale="0.5 0.5 0.5"></a-image>
     </a-marker>
