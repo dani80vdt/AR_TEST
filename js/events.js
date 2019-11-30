@@ -1,12 +1,15 @@
 AFRAME.registerComponent('markerhandler', {
 
-    init: function() {
+    init: function () {
+        console.log("Init");
+        const markerSelector = document.querySelector("#markerSelector");
 		const minusMarker = document.querySelector("#minus");
         const plusMarker = document.querySelector("#plus");
         const aEntity = document.querySelector("#gauge");
 
         // every click, we make our model grow in size :)
-        minusMarker.addEventListener('click', function(ev, target){
+        minusMarker.addEventListener('click', function (ev, target) {
+            console.log("Click minus");
             const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
             if (aEntity && intersectedElement === aEntity) {
                 const scale = aEntity.getAttribute('scale');
@@ -15,7 +18,18 @@ AFRAME.registerComponent('markerhandler', {
             }
         });
 		
-		plusMarker.addEventListener('click', function(ev, target){
+        plusMarker.addEventListener('click', function (ev, target) {
+            console.log("Click plus");
+            const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+            if (aEntity && intersectedElement === aEntity) {
+                const scale = aEntity.getAttribute('scale');
+                Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+                aEntity.setAttribute('scale', scale);
+            }
+        });
+
+        markerSelector.addEventListener('click', function (ev, target) {
+            console.log("Click markerSelector");
             const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
             if (aEntity && intersectedElement === aEntity) {
                 const scale = aEntity.getAttribute('scale');
