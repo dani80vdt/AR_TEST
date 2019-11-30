@@ -23,7 +23,7 @@ AFRAME.registerComponent('markerhandler', {
             console.log("Click minus " +index);
             if (index > 0) {
                 index--;
-                aEntity.setAttribute('src', '.\images\gauge' + str(index) + '.jpg');
+                aEntity.setAttribute('src', '.\images\gauge' + index.toString() + '.jpg');
             }
             //const scale = aEntity.getAttribute('scale');
             //Object.keys(scale).forEach((key) => scale[key] = scale[key] *0.8);
@@ -34,7 +34,7 @@ AFRAME.registerComponent('markerhandler', {
             console.log("Click plus " + index);
             if (index < 4) {
                 index++;
-                aEntity.setAttribute('src', '.\images\gauge' + str(index) + '.jpg');
+                aEntity.setAttribute('src', '.\images\gauge' + index.toString() + '.jpg');
             }
             //const scale = aEntity.getAttribute('scale');
             //Object.keys(scale).forEach((key) => scale[key] = scale[key] *1.2);
