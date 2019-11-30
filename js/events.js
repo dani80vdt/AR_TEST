@@ -3,7 +3,7 @@ AFRAME.registerComponent('markerhandler', {
     init: function() {
 		const minusMarker = document.querySelector("#minus");
         const plusMarker = document.querySelector("#plus");
-        const aEntity = document.querySelector("#gauge_medium");
+        const aEntity = document.querySelector("#gauge");
 
         // every click, we make our model grow in size :)
         minusMarker.addEventListener('click', function(ev, target){

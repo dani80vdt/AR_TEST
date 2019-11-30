@@ -16,20 +16,24 @@
 <!-- set AR.js to AFrame -->
 <a-scene embedded arjs="debugUIEnabled:false;">
     <a-assets>
-        <a-entity id="gauge_medium" geometry="primitive: plane" material="src: url(.\images\gauge.png)"></a-entity>
-        <a-entity id="plus" geometry="primitive: plane" material="src: url(.\images\plus.png)"></a-entity>
-        <a-entity id="minus" geometry="primitive: plane" material="src: url(.\images\minus.png)"></a-entity>
+        <!-- <a-entity id="gauge_medium" geometry="primitive: plane" material="src: url(.\images\gauge.png)"></a-entity>
+         <a-entity id="plus" geometry="primitive: plane" material="src: url(.\images\plus.png)"></a-entity>
+         <a-entity id="minus" geometry="primitive: plane" material="src: url(.\images\minus.png)"></a-entity>
+    -->
     </a-assets>
 	  <!-- set marker -->
-    <a-marker preset="hiro" >
-        <a-image src="#minus" position="-1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
-        <a-image src="#gauge_medium" position="0 0 0" rotation="-90 0 0" scale="1 1 1"></a-image>
-        <a-image src="#plus" position="1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
-        <!-- <a-image src="gauge.png" position="0 0 0" rotation="-90 0 0"  color="#28a745" scale="1 1 1"></a-image> -->
+    <a-marker preset="hiro">
+        <!--    <a-image src="#minus" position="-1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+       <a-image src="#gauge_medium" position="0 0 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+       <a-image src="#plus" position="1 0 0" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+    -->
+        <a-image id="minus" src=".\images\minus.png" position="-1 0 0" rotation="-90 0 0" color="#28a745" scale="0.5 0.5 0.5"></a-image>
+        <a-image id="gauge" src=".\images\gauge.png" position="0 0 0" rotation="-90 0 0" color="#28a745" scale="1 1 1"></a-image>
+        <a-image id="plus" src=".\images\plus.png" position="1 0 0" rotation="-90 0 0" color="#28a745" scale="0.5 0.5 0.5"></a-image>
     </a-marker>
 
-	<!-- set camera -->
-	<a-entity camera></a-entity>
+    <!-- set camera -->
+        <a-entity camera></a-entity>
 </a-scene>
 
 </body>
