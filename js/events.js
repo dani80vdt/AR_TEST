@@ -1,5 +1,6 @@
 var index = 2;
 
+/*
 AFRAME.registerComponent('video-vidhandler', {
     init: function () {
         console.log('video init entered');
@@ -18,7 +19,7 @@ AFRAME.registerComponent('video-vidhandler', {
             this.vid.pause();
         }
     }
-});
+});*/
 
 AFRAME.registerComponent('markerhandler', {
 
