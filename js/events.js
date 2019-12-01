@@ -46,9 +46,6 @@ AFRAME.registerComponent('markerhandler', {
                 index--;
                 aEntity.setAttribute('src', './images/gauge' + index.toString() + '.png');
             }
-            //const scale = aEntity.getAttribute('scale');
-            //Object.keys(scale).forEach((key) => scale[key] = scale[key] *0.8);
-            //aEntity.setAttribute('scale', scale);
         });
 		
         plusMarker.addEventListener('click', function (ev, target) {
@@ -57,9 +54,6 @@ AFRAME.registerComponent('markerhandler', {
                 index++;
                 aEntity.setAttribute('src', './images/gauge' + index.toString() + '.png');
             }
-            //const scale = aEntity.getAttribute('scale');
-            //Object.keys(scale).forEach((key) => scale[key] = scale[key] *1.2);
-            //aEntity.setAttribute('scale', scale);
         });
 
        
