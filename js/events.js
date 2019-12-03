@@ -1,6 +1,5 @@
 var index = 2;
 
-
 AFRAME.registerComponent('markerhandler', {
 
     init: function () {
