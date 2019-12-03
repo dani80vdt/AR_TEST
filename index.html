@@ -20,13 +20,13 @@
             <img id="plus-asset" src="images/plus.png" />
             <img id="gauge-asset" src="images/gauge2.png" />
 
-            <video id="sintel-asset" autoplay loop="true" src="videos/sintel.mp4"></video>
-
             <a-asset-item id="animated-asset" src="models/CesiumMan.gltf"></a-asset-item>
+
             <!--
+            <video id="sintel-asset" autoplay loop="true" src="videos/sintel.mp4"></video>
             <video preload="none" id="invitation" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
                 <source src="videos/invitation.mp4">
-            </video> 
+            </video>
             -->
         </a-assets>
 
@@ -40,18 +40,20 @@
         <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity animation-mixer
                       gltf-model="#animated-asset"
-                      rotation="0 90 90"
+                      rotation="0 -90 90"
                       scale="2 2 2">
             </a-entity>
         </a-marker>
 
-        <!-- Using the asset management system. -->
-
+        <!-- Using the asset management system.-->
+        <!--
         <a-marker id="video-marker" type='barcode' value='7'>
-            <a-video src="#sintel-asset" width="16" height="9" rotation="-90 0 0" position="0 0 0"></a-video>
+            <a-video src="#sintel-asset" width="4" height="2.2" rotation="-90 0 0" position="0 0 0"></a-video>
         </a-marker>
-        <!--   <a-marker id="marker1" type='pattern' url='markers/invi-pattern-marker.patt' video-vidhandler>
-        <a-plane scale="4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#invitation' controls></a-plane>
+        -->
+        <!--
+        <a-marker id="marker1" type='pattern' url='markers/invi-pattern-marker.patt' video-vidhandler>
+            <a-plane scale="4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#invitation' controls></a-plane>
         </a-marker> -->
         <!-- set camera -->
         <a-entity camera></a-entity>
