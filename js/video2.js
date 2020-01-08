@@ -3,7 +3,7 @@ AFRAME.registerComponent('video-vidhandler', {
         console.log('video init entered');
         this.toggle = false;
         this.vid = document.querySelector("#invitation");
-        this.vid.play();
+        this.vid.pause();
     },
     tick: function () {
         if (this.el.object3D.visible === true) {
